@@ -2,6 +2,24 @@ require 'csv'
 require 'phonetic'
 
 module IdChecker
+
+  class ResultSet
+
+  	def initialize(attr)
+  	  @out = attr[:out]
+  	  @data = attr[:data]
+    end
+
+    def out
+      @out
+    end
+
+    def data
+      @data
+    end
+
+  end
+
   class FileReader
     def self.read(fpath)
       out = ''
@@ -27,7 +45,7 @@ module IdChecker
       out << "UNIQUE:\n\n" + data[:uniq].join("\n\n")
       out << "\n\n=============================\n\n"
       out << "DUPLICATES:\n\n" + data[:dup].join("\n\n")
-      {data: data, out: out}
+      ResultSet.new(data: data, out: out)
     end
   end
 end

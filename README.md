@@ -1,11 +1,23 @@
 # id_checker
 
-## Install
+## Basic Install
 ```
-gem install id_checker -s https://github.com/massrb
+gem install specific_install
+gem specific_install -l  https://github.com/massrb/id_checker.git
+
 ```
 
 ## Run
 
 ```
 require 'id_checker'
+
+Path = '/mnt/share/validity/advanced.csv'
+
+result = IdChecker::FileReader.read(Path)
+
+data = result.data
+
+puts result.out
+
+```
