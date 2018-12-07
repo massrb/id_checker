@@ -1,5 +1,5 @@
 require 'csv'
-require 'metaphone'
+require 'phonetic'
 
 module IdChecker
   class FileReader
