@@ -1,9 +1,10 @@
 require 'csv'
+require 'metaphone'
 
 module IdChecker
   class FileReader
     def self.read(fpath)
-
+      out = ''
       map = {}
       data = {uniq: [], dup: []}
 
