@@ -9,5 +9,5 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/massrb/id_checker'
   s.authors = ['L Guild']
   s.require_paths = ["lib"]
-  s.add_runtime_dependency 'phonetic', '~> 0'
+  s.add_runtime_dependency 'phonetic', '~> 1'
 end
